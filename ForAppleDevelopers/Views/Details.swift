@@ -19,6 +19,11 @@ struct Details: View {
         return url?.host() ?? "none"
     }
     
+    var gallerySection: Bool {
+//        return developer.images != nil ? true : false
+        return developer.images != nil
+    }
+    
     var body: some View {
         ScrollView {
             Text(developer.name)
@@ -34,6 +39,32 @@ struct Details: View {
                     .padding(.bottom)
                 
                 Divider()
+                
+                if gallerySection {
+                    Text("Gallery")
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(alignment: .top, spacing: 0) {
+                            ForEach((developer.images)!, id: \.self ) { item in
+                                VStack(alignment: .leading) {
+                                    Image(item)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .padding(.trailing)
+                                        .frame(height: 160)
+                                    
+                                    Text("Source: Apple")
+//                                        .foregroundColor(.gray)
+                                        .font(.caption)
+                                }
+                                
+                            }
+                        }
+                    }
+                    .padding(.bottom)
+                    
+                    Divider()
+                }
                 
                 Text("External URL")
                     .padding(.top)
@@ -51,7 +82,6 @@ struct Details: View {
                     .padding(.top, 1)
                     .font(.subheadline)
                     .foregroundColor(.gray)
-                
 
             }
             .padding(.leading)

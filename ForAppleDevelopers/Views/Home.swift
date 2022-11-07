@@ -11,13 +11,8 @@ struct Home: View {
     @EnvironmentObject var modelData: ModelData
     
     var body: some View {
-
         NavigationStack {
             List {
-                Section {
-                    Text("List of technologies and tools.")
-                    Text("Read more by clicking on the list item!")
-                }
                 ForEach(modelData.developers) { item in
                     NavigationLink {
                         Details(developer: item)
@@ -26,6 +21,7 @@ struct Home: View {
                     }
                 }
             }
+            .navigationTitle("Topics")
         }
     }
 }

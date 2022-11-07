@@ -20,6 +20,7 @@ struct About: View {
         
                 Text("About")
                     .font(.title2.bold())
+                    .padding(.bottom)
         
                 Text("A collection of various information and resources about the technologies and platforms used to develop applications for Apple devices.")
                     .font(.subheadline)

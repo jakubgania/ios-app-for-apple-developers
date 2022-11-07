@@ -3,46 +3,60 @@
         "id": 1000,
         "name": "Xcode",
         "description": "Xcode 14 includes everything you need to develop, test, and distribute apps across all Apple platforms. Leverage the simplicity and power of Swift and SwiftUI with a new multiplatform app experience, code faster with enhanced editor features, and start testing and deploying from Xcode Cloud to TestFlight and the App Store. Creating amazing apps has never been easier.",
+        "images": [
+            "screen-swift-large_2x",
+            "screen-coding-large_2x"
+        ],
         "externalURL": "https://developer.apple.com/xcode/"
     },
     {
         "id": 1001,
+        "name": "Xcode Cloud",
+        "description": "Xcode Cloud is a continuous integration and delivery service built into Xcode and designed expressly for Apple developers. It accelerates the development and delivery of high-quality apps by bringing together cloud-based tools that help you build apps, run automated tests in parallel, deliver apps to testers, and view and manage user feedback.",
+        "images": [
+            "screen-app-store-connect_2x",
+            "screen-cloud_2x"
+        ],
+        "externalURL": "https://developer.apple.com/xcode-cloud/"
+    },
+    {
+        "id": 1002,
         "name": "Swift",
         "description": "Swift is a powerful and intuitive programming language for iOS, iPadOS, macOS, tvOS, and watchOS. Writing Swift code is interactive and fun, the syntax is concise yet expressive, and Swift includes modern features developers love. Swift code is safe by design and produces software that runs lightning-fast.",
         "externalURL": "https://developer.apple.com/swift/"
     },
     {
-        "id": 1002,
+        "id": 1003,
         "name": "SwiftUI",
         "description": "SwiftUI helps you build great-looking apps across all Apple platforms with the power of Swift — and surprisingly little code. You can bring even better experiences to everyone, on any Apple device, using just one set of tools and APIs.",
         "externalURL": "https://developer.apple.com/xcode/swiftui/"
     },
     {
-        "id": 1003,
+        "id": 1004,
         "name": "SF Symbols 4",
         "description": "With over 4,400 symbols, SF Symbols is a library of iconography designed to integrate seamlessly with San Francisco, the system font for Apple platforms. Symbols come in nine weights and three scales, and automatically align with text labels. They can be exported and edited using vector graphics editing tools to create custom symbols with shared design characteristics and accessibility features. SF Symbols 4 features over 1000 new symbols, variable color, automatic rendering, and new unified layer annotation.",
         "externalURL": "https://developer.apple.com/sf-symbols/"
     },
     {
-        "id": 1004,
+        "id": 1005,
         "name": "Swift Plaugrounds",
         "description": "Swift Playgrounds is a revolutionary app for iPad and Mac that helps you learn to code and build apps using Swift, the same powerful language used to create world-class apps for the App Store. Engaging lessons and walkthroughs demonstrate the core concepts of coding and building apps as you write real Swift code in an interactive environment.",
         "externalURL": "https://developer.apple.com/swift-playgrounds/"
     },
     {
-        "id": 1005,
+        "id": 1006,
         "name": "Apple Developer Program",
         "description": "Join the Apple Developer Program to reach customers around the world on the App Store for iPhone, iPad, Mac, Apple Watch, and Apple TV. Membership includes all the tools, resources, and support you need to develop and distribute apps, including access to beta software, app services, testing tools, app analytics, and more.",
         "externalURL": "https://developer.apple.com/programs/"
     },
     {
-        "id": 1006,
+        "id": 1007,
         "name": "Apple GitHub",
         "description": "Official Apple account on GitHub. There you can find various repositories and open-source technologies.",
         "externalURL": "https://github.com/apple"
     },
     {
-        "id": 1007,
+        "id": 1008,
         "name": "App Store",
         "description": "The App Store is a safe and trusted place for customers to discover apps, and a great opportunity for developers to deliver apps and services across iPhone, iPad, Mac, Apple TV, and Apple Watch in 175 regions. Find articles, guidelines, and other resources to help you design incredible apps, reach more users, and grow your business.",
         "externalURL": "https://developer.apple.com/app-store/"
