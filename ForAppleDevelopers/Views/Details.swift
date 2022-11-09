@@ -6,12 +6,11 @@
 //
 
 import SwiftUI
+import LinkPresentation
 
 struct Details: View {
     @EnvironmentObject var modelData: ModelData
     var developer: Developer
-    
-//    let lemonYellow = Color(hue: 0.1639, saturation: 1, brightness: 1)
 
     var host: String {
         let str = developer.externalURL
@@ -20,19 +19,33 @@ struct Details: View {
     }
     
     var gallerySection: Bool {
-//        return developer.images != nil ? true : false
         return developer.images != nil
     }
     
+    @State var isShown = false
+    
     var body: some View {
+        
         ScrollView {
-            Text(developer.name)
-                .font(.title.bold())
-                .frame(maxWidth: .infinity, minHeight: 200)
-                .background(.white)
+            
+            VStack {
+                if isShown {
+                    Text(developer.name)
+                        .font(.title.bold())
+                        .frame(maxWidth: .infinity, minHeight: 200)
+                        .background(.white)
+                        .transition(.opacity)
+                }
+            }
+            .animation(.easeInOut(duration: 1).delay(0.32), value: isShown)
+            .onAppear() {
+                self.isShown.toggle()
+            }
+                
             
             VStack(alignment: .leading) {
                 Text("Description")
+                    .bold()
                 
                 Text(developer.description)
                     .padding(.top)
@@ -42,6 +55,7 @@ struct Details: View {
                 
                 if gallerySection {
                     Text("Gallery")
+                        .bold()
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(alignment: .top, spacing: 0) {
@@ -50,14 +64,14 @@ struct Details: View {
                                     Image(item)
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
-                                        .padding(.trailing)
-                                        .frame(height: 160)
+//                                        .padding(.trailing)
+                                        .cornerRadius(12)
+                                        .frame(height: 180)
                                     
                                     Text("Source: Apple")
-//                                        .foregroundColor(.gray)
                                         .font(.caption)
                                 }
-                                
+                                .padding(.trailing)
                             }
                         }
                     }
@@ -67,7 +81,9 @@ struct Details: View {
                 }
                 
                 Text("External URL")
+                    .bold()
                     .padding(.top)
+                    .padding(.bottom)
                 
                 Text("You can read more on the website below.")
                     .padding(.bottom)
@@ -80,8 +96,26 @@ struct Details: View {
                 
                 Text(host)
                     .padding(.top, 1)
+                    .padding(.bottom, 30)
                     .font(.subheadline)
                     .foregroundColor(.gray)
+                
+//                let url = URL(string: "https://developer.apple.pl")!
+//                let linkPreview = LPLinkView()
+//                let provider = LPMetadataProvider()
+//                provider.startFetchingMetadata(for: url) { (metaData, error) in
+//                    guard let data = metaData, error == nil else {
+//                        return
+//                    }
+//                    DispatchQueue.main.async {
+//                        linkPreview.metadata = data
+//                        self?.view.addSubview(linkPreview)
+//                        linkPreview.frame = CGRect(x:0, y:0, width: 250, height: 250)
+//                        linkPreview.center = self?.view.center ?? .zero
+//                        self.view.addSubview(linkPreview)
+//                        linkPreview.sizeToFit()
+//                    }
+//                }
 
             }
             .padding(.leading)

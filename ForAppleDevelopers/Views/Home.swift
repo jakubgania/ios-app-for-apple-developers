@@ -11,7 +11,7 @@ struct Home: View {
     @EnvironmentObject var modelData: ModelData
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             List {
                 ForEach(modelData.developers) { item in
                     NavigationLink {
