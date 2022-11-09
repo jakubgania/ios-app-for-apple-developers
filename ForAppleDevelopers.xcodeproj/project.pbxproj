@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C2918CE291C24F300815F3B /* LinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2918CD291C24F300815F3B /* LinkCell.swift */; };
 		8C91D25829192D2C00834C2F /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C91D25729192D2C00834C2F /* About.swift */; };
 		8CDE90862917EE5F00EE41F3 /* ForAppleDevelopersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDE90852917EE5F00EE41F3 /* ForAppleDevelopersApp.swift */; };
 		8CDE90882917EE5F00EE41F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDE90872917EE5F00EE41F3 /* ContentView.swift */; };
@@ -42,7 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8C2918CD291C24F300815F3B /* LinkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkCell.swift; sourceTree = "<group>"; };
 		8C91D25729192D2C00834C2F /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		8C91D2592919427800834C2F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8CDE90822917EE5F00EE41F3 /* ForAppleDevelopers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForAppleDevelopers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,7 +159,6 @@
 				8CDE90872917EE5F00EE41F3 /* ContentView.swift */,
 				8CDE90BB29187C2000EE41F3 /* Home.swift */,
 				8CDE90BD29187DA600EE41F3 /* Details.swift */,
-				8C2918CD291C24F300815F3B /* LinkCell.swift */,
 				8CDE90BF2918813000EE41F3 /* Row.swift */,
 				8C91D25729192D2C00834C2F /* About.swift */,
 			);
@@ -311,7 +308,6 @@
 				8CDE90B72917F1FE00EE41F3 /* Developer.swift in Sources */,
 				8C91D25829192D2C00834C2F /* About.swift in Sources */,
 				8CDE90882917EE5F00EE41F3 /* ContentView.swift in Sources */,
-				8C2918CE291C24F300815F3B /* LinkCell.swift in Sources */,
 				8CDE90BE29187DA600EE41F3 /* Details.swift in Sources */,
 				8CDE90BC29187C2000EE41F3 /* Home.swift in Sources */,
 				8CDE90862917EE5F00EE41F3 /* ForAppleDevelopersApp.swift in Sources */,
