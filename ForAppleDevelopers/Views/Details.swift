@@ -8,6 +8,30 @@
 import SwiftUI
 import LinkPresentation
 
+//public struct LinkCell: UIViewRepresentable {
+//    var url: URL
+//    
+//    public func makeUIView(context: Context) -> LPLinkView {
+//        let url = URL(string: "https://developer.apple.com")!
+//        let linkView = LPLinkView(url: url)
+//        let datapProvider = LPMetadataProvider()
+//        datapProvider.startFetchingMetadata(for: url) { (metaData, error) in
+//            if let metaData = metaData {
+//                DispatchQueue.main.async {
+//                    linkView.metadata = metaData
+//                    linkView.sizeToFit()
+//                }
+//            }
+//        }
+//        
+//        return linkView
+//    }
+//    
+//    public func updateUIView(_ uiView: LPLinkView, context: Context) {
+//        //
+//    }
+//}
+
 struct Details: View {
     @EnvironmentObject var modelData: ModelData
     var developer: Developer
@@ -41,6 +65,12 @@ struct Details: View {
             .onAppear() {
                 self.isShown.toggle()
             }
+            
+//            LinkCell(url: URL(string:
+//                                        // swiftlint:disable line_length
+//                                        "https://onet.pl/")!)
+//            .padding()
+//            .frame(width: 200, height: 200)
                 
             
             VStack(alignment: .leading) {
@@ -64,7 +94,6 @@ struct Details: View {
                                     Image(item)
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
-//                                        .padding(.trailing)
                                         .cornerRadius(12)
                                         .frame(height: 180)
                                     
@@ -88,17 +117,29 @@ struct Details: View {
                 Text("You can read more on the website below.")
                     .padding(.bottom)
                 
-                HStack {
-                    Link("View this link", destination: URL(string: developer.externalURL)!)
-                    Image(systemName: "link")
-                        .symbolRenderingMode(.multicolor)
-                }
+//                HStack {
+//                    Link("View this link", destination: URL(string: developer.externalURL)!)
+//                    Image(systemName: "link")
+//                        .symbolRenderingMode(.multicolor)
+//                }
                 
                 Text(host)
                     .padding(.top, 1)
                     .padding(.bottom, 30)
                     .font(.subheadline)
                     .foregroundColor(.gray)
+                
+//                let url = URL(string: "https://developer.apple.pl")!
+//                let linkView = LPLinkView(url: url)
+//                let datapProvider = LPMetadataProvider()
+//                datapProvider.startFetchingMetadata(for: url) { (metaData, error) in
+//                    if let metaData = metaData {
+//                        DispatchQueue.main.async {
+//                            linkView.metadata = metaData
+//                            linkView.sizeToFit()
+//                        }
+//                    }
+//                }
                 
 //                let url = URL(string: "https://developer.apple.pl")!
 //                let linkPreview = LPLinkView()
@@ -116,6 +157,8 @@ struct Details: View {
 //                        linkPreview.sizeToFit()
 //                    }
 //                }
+                
+                LinkCell(url: (URL(string: "https://developer.apple.com"))!)
 
             }
             .padding(.leading)
